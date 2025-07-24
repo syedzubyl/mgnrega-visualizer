@@ -1,0 +1,578 @@
+[
+  {
+    "year": 2005,
+    "state": "Rajasthan",
+    "district": "Jaipur",
+    "gender": "Male",
+    "applied": 1250,
+    "worked": 980,
+    "not_worked": 270
+  },
+  {
+    "year": 2005,
+    "state": "Rajasthan",
+    "district": "Jaipur",
+    "gender": "Female",
+    "applied": 890,
+    "worked": 720,
+    "not_worked": 170
+  },
+  {
+    "year": 2005,
+    "state": "Rajasthan",
+    "district": "Jodhpur",
+    "gender": "Male",
+    "applied": 1100,
+    "worked": 850,
+    "not_worked": 250
+  },
+  {
+    "year": 2005,
+    "state": "Rajasthan",
+    "district": "Jodhpur",
+    "gender": "Female",
+    "applied": 780,
+    "worked": 620,
+    "not_worked": 160
+  },
+  {
+    "year": 2005,
+    "state": "Maharashtra",
+    "district": "Mumbai",
+    "gender": "Male",
+    "applied": 2100,
+    "worked": 1800,
+    "not_worked": 300
+  },
+  {
+    "year": 2005,
+    "state": "Maharashtra",
+    "district": "Mumbai",
+    "gender": "Female",
+    "applied": 1650,
+    "worked": 1400,
+    "not_worked": 250
+  },
+  {
+    "year": 2005,
+    "state": "Maharashtra",
+    "district": "Pune",
+    "gender": "Male",
+    "applied": 1850,
+    "worked": 1550,
+    "not_worked": 300
+  },
+  {
+    "year": 2005,
+    "state": "Maharashtra",
+    "district": "Pune",
+    "gender": "Female",
+    "applied": 1420,
+    "worked": 1200,
+    "not_worked": 220
+  },
+  {
+    "year": 2006,
+    "state": "Rajasthan",
+    "district": "Jaipur",
+    "gender": "Male",
+    "applied": 1350,
+    "worked": 1100,
+    "not_worked": 250
+  },
+  {
+    "year": 2006,
+    "state": "Rajasthan",
+    "district": "Jaipur",
+    "gender": "Female",
+    "applied": 950,
+    "worked": 800,
+    "not_worked": 150
+  },
+  {
+    "year": 2006,
+    "state": "Rajasthan",
+    "district": "Jodhpur",
+    "gender": "Male",
+    "applied": 1200,
+    "worked": 980,
+    "not_worked": 220
+  },
+  {
+    "year": 2006,
+    "state": "Rajasthan",
+    "district": "Jodhpur",
+    "gender": "Female",
+    "applied": 850,
+    "worked": 720,
+    "not_worked": 130
+  },
+  {
+    "year": 2006,
+    "state": "Maharashtra",
+    "district": "Mumbai",
+    "gender": "Male",
+    "applied": 2250,
+    "worked": 1950,
+    "not_worked": 300
+  },
+  {
+    "year": 2006,
+    "state": "Maharashtra",
+    "district": "Mumbai",
+    "gender": "Female",
+    "applied": 1750,
+    "worked": 1520,
+    "not_worked": 230
+  },
+  {
+    "year": 2006,
+    "state": "Maharashtra",
+    "district": "Pune",
+    "gender": "Male",
+    "applied": 1950,
+    "worked": 1680,
+    "not_worked": 270
+  },
+  {
+    "year": 2006,
+    "state": "Maharashtra",
+    "district": "Pune",
+    "gender": "Female",
+    "applied": 1520,
+    "worked": 1320,
+    "not_worked": 200
+  },
+  {
+    "year": 2010,
+    "state": "Rajasthan",
+    "district": "Jaipur",
+    "gender": "Male",
+    "applied": 1800,
+    "worked": 1550,
+    "not_worked": 250
+  },
+  {
+    "year": 2010,
+    "state": "Rajasthan",
+    "district": "Jaipur",
+    "gender": "Female",
+    "applied": 1400,
+    "worked": 1200,
+    "not_worked": 200
+  },
+  {
+    "year": 2010,
+    "state": "Rajasthan",
+    "district": "Jodhpur",
+    "gender": "Male",
+    "applied": 1650,
+    "worked": 1420,
+    "not_worked": 230
+  },
+  {
+    "year": 2010,
+    "state": "Rajasthan",
+    "district": "Jodhpur",
+    "gender": "Female",
+    "applied": 1250,
+    "worked": 1080,
+    "not_worked": 170
+  },
+  {
+    "year": 2010,
+    "state": "Maharashtra",
+    "district": "Mumbai",
+    "gender": "Male",
+    "applied": 2800,
+    "worked": 2450,
+    "not_worked": 350
+  },
+  {
+    "year": 2010,
+    "state": "Maharashtra",
+    "district": "Mumbai",
+    "gender": "Female",
+    "applied": 2200,
+    "worked": 1950,
+    "not_worked": 250
+  },
+  {
+    "year": 2010,
+    "state": "Maharashtra",
+    "district": "Pune",
+    "gender": "Male",
+    "applied": 2450,
+    "worked": 2150,
+    "not_worked": 300
+  },
+  {
+    "year": 2010,
+    "state": "Maharashtra",
+    "district": "Pune",
+    "gender": "Female",
+    "applied": 1950,
+    "worked": 1720,
+    "not_worked": 230
+  },
+  {
+    "year": 2015,
+    "state": "Rajasthan",
+    "district": "Jaipur",
+    "gender": "Male",
+    "applied": 2200,
+    "worked": 1950,
+    "not_worked": 250
+  },
+  {
+    "year": 2015,
+    "state": "Rajasthan",
+    "district": "Jaipur",
+    "gender": "Female",
+    "applied": 1850,
+    "worked": 1650,
+    "not_worked": 200
+  },
+  {
+    "year": 2015,
+    "state": "Rajasthan",
+    "district": "Jodhpur",
+    "gender": "Male",
+    "applied": 2000,
+    "worked": 1780,
+    "not_worked": 220
+  },
+  {
+    "year": 2015,
+    "state": "Rajasthan",
+    "district": "Jodhpur",
+    "gender": "Female",
+    "applied": 1650,
+    "worked": 1480,
+    "not_worked": 170
+  },
+  {
+    "year": 2015,
+    "state": "Maharashtra",
+    "district": "Mumbai",
+    "gender": "Male",
+    "applied": 3200,
+    "worked": 2900,
+    "not_worked": 300
+  },
+  {
+    "year": 2015,
+    "state": "Maharashtra",
+    "district": "Mumbai",
+    "gender": "Female",
+    "applied": 2750,
+    "worked": 2500,
+    "not_worked": 250
+  },
+  {
+    "year": 2015,
+    "state": "Maharashtra",
+    "district": "Pune",
+    "gender": "Male",
+    "applied": 2850,
+    "worked": 2580,
+    "not_worked": 270
+  },
+  {
+    "year": 2015,
+    "state": "Maharashtra",
+    "district": "Pune",
+    "gender": "Female",
+    "applied": 2400,
+    "worked": 2180,
+    "not_worked": 220
+  },
+  {
+    "year": 2020,
+    "state": "Rajasthan",
+    "district": "Jaipur",
+    "gender": "Male",
+    "applied": 2800,
+    "worked": 2550,
+    "not_worked": 250
+  },
+  {
+    "year": 2020,
+    "state": "Rajasthan",
+    "district": "Jaipur",
+    "gender": "Female",
+    "applied": 2450,
+    "worked": 2250,
+    "not_worked": 200
+  },
+  {
+    "year": 2020,
+    "state": "Rajasthan",
+    "district": "Jodhpur",
+    "gender": "Male",
+    "applied": 2550,
+    "worked": 2350,
+    "not_worked": 200
+  },
+  {
+    "year": 2020,
+    "state": "Rajasthan",
+    "district": "Jodhpur",
+    "gender": "Female",
+    "applied": 2200,
+    "worked": 2050,
+    "not_worked": 150
+  },
+  {
+    "year": 2020,
+    "state": "Maharashtra",
+    "district": "Mumbai",
+    "gender": "Male",
+    "applied": 3800,
+    "worked": 3500,
+    "not_worked": 300
+  },
+  {
+    "year": 2020,
+    "state": "Maharashtra",
+    "district": "Mumbai",
+    "gender": "Female",
+    "applied": 3350,
+    "worked": 3100,
+    "not_worked": 250
+  },
+  {
+    "year": 2020,
+    "state": "Maharashtra",
+    "district": "Pune",
+    "gender": "Male",
+    "applied": 3450,
+    "worked": 3200,
+    "not_worked": 250
+  },
+  {
+    "year": 2020,
+    "state": "Maharashtra",
+    "district": "Pune",
+    "gender": "Female",
+    "applied": 3000,
+    "worked": 2800,
+    "not_worked": 200
+  },
+  {
+    "year": 2023,
+    "state": "Rajasthan",
+    "district": "Jaipur",
+    "gender": "Male",
+    "applied": 3200,
+    "worked": 2980,
+    "not_worked": 220
+  },
+  {
+    "year": 2023,
+    "state": "Rajasthan",
+    "district": "Jaipur",
+    "gender": "Female",
+    "applied": 2850,
+    "worked": 2650,
+    "not_worked": 200
+  },
+  {
+    "year": 2023,
+    "state": "Rajasthan",
+    "district": "Jodhpur",
+    "gender": "Male",
+    "applied": 2950,
+    "worked": 2750,
+    "not_worked": 200
+  },
+  {
+    "year": 2023,
+    "state": "Rajasthan",
+    "district": "Jodhpur",
+    "gender": "Female",
+    "applied": 2600,
+    "worked": 2450,
+    "not_worked": 150
+  },
+  {
+    "year": 2023,
+    "state": "Maharashtra",
+    "district": "Mumbai",
+    "gender": "Male",
+    "applied": 4200,
+    "worked": 3950,
+    "not_worked": 250
+  },
+  {
+    "year": 2023,
+    "state": "Maharashtra",
+    "district": "Mumbai",
+    "gender": "Female",
+    "applied": 3800,
+    "worked": 3600,
+    "not_worked": 200
+  },
+  {
+    "year": 2023,
+    "state": "Maharashtra",
+    "district": "Pune",
+    "gender": "Male",
+    "applied": 3850,
+    "worked": 3650,
+    "not_worked": 200
+  },
+  {
+    "year": 2023,
+    "state": "Maharashtra",
+    "district": "Pune",
+    "gender": "Female",
+    "applied": 3450,
+    "worked": 3280,
+    "not_worked": 170
+  },
+  {
+    "year": 2024,
+    "state": "Rajasthan",
+    "district": "Jaipur",
+    "gender": "Male",
+    "applied": 3350,
+    "worked": 3150,
+    "not_worked": 200
+  },
+  {
+    "year": 2024,
+    "state": "Rajasthan",
+    "district": "Jaipur",
+    "gender": "Female",
+    "applied": 3000,
+    "worked": 2820,
+    "not_worked": 180
+  },
+  {
+    "year": 2024,
+    "state": "Rajasthan",
+    "district": "Jodhpur",
+    "gender": "Male",
+    "applied": 3100,
+    "worked": 2920,
+    "not_worked": 180
+  },
+  {
+    "year": 2024,
+    "state": "Rajasthan",
+    "district": "Jodhpur",
+    "gender": "Female",
+    "applied": 2750,
+    "worked": 2600,
+    "not_worked": 150
+  },
+  {
+    "year": 2024,
+    "state": "Maharashtra",
+    "district": "Mumbai",
+    "gender": "Male",
+    "applied": 4400,
+    "worked": 4180,
+    "not_worked": 220
+  },
+  {
+    "year": 2024,
+    "state": "Maharashtra",
+    "district": "Mumbai",
+    "gender": "Female",
+    "applied": 4000,
+    "worked": 3820,
+    "not_worked": 180
+  },
+  {
+    "year": 2024,
+    "state": "Maharashtra",
+    "district": "Pune",
+    "gender": "Male",
+    "applied": 4050,
+    "worked": 3870,
+    "not_worked": 180
+  },
+  {
+    "year": 2024,
+    "state": "Maharashtra",
+    "district": "Pune",
+    "gender": "Female",
+    "applied": 3650,
+    "worked": 3500,
+    "not_worked": 150
+  },
+  {
+    "year": 2025,
+    "state": "Rajasthan",
+    "district": "Jaipur",
+    "gender": "Male",
+    "applied": 3500,
+    "worked": 3320,
+    "not_worked": 180
+  },
+  {
+    "year": 2025,
+    "state": "Rajasthan",
+    "district": "Jaipur",
+    "gender": "Female",
+    "applied": 3150,
+    "worked": 2990,
+    "not_worked": 160
+  },
+  {
+    "year": 2025,
+    "state": "Rajasthan",
+    "district": "Jodhpur",
+    "gender": "Male",
+    "applied": 3250,
+    "worked": 3090,
+    "not_worked": 160
+  },
+  {
+    "year": 2025,
+    "state": "Rajasthan",
+    "district": "Jodhpur",
+    "gender": "Female",
+    "applied": 2900,
+    "worked": 2760,
+    "not_worked": 140
+  },
+  {
+    "year": 2025,
+    "state": "Maharashtra",
+    "district": "Mumbai",
+    "gender": "Male",
+    "applied": 4600,
+    "worked": 4400,
+    "not_worked": 200
+  },
+  {
+    "year": 2025,
+    "state": "Maharashtra",
+    "district": "Mumbai",
+    "gender": "Female",
+    "applied": 4200,
+    "worked": 4020,
+    "not_worked": 180
+  },
+  {
+    "year": 2025,
+    "state": "Maharashtra",
+    "district": "Pune",
+    "gender": "Male",
+    "applied": 4250,
+    "worked": 4080,
+    "not_worked": 170
+  },
+  {
+    "year": 2025,
+    "state": "Maharashtra",
+    "district": "Pune",
+    "gender": "Female",
+    "applied": 3850,
+    "worked": 3700,
+    "not_worked": 150
+  }
+]
