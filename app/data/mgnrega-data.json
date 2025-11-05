@@ -1,0 +1,72 @@
+
+[
+  {
+    "district": "Ariyalur",
+    "employment": {
+      "total_households": 150000,
+      "provided_employment": 120000,
+      "person_days_generated": {
+        "sc": 2000000,
+        "st": 500000,
+        "others": 4000000
+      }
+    },
+    "wages": {
+      "total_wages": 800000000,
+      "average_wage_per_day": 250
+    },
+    "gender_participation": {
+      "total_workers": 180000,
+      "women_workers": 95000
+    },
+    "performance": {
+      "work_completion_rate": 0.90
+    }
+  },
+  {
+    "district": "Chengalpattu",
+    "employment": {
+      "total_households": 250000,
+      "provided_employment": 200000,
+      "person_days_generated": {
+        "sc": 3000000,
+        "st": 800000,
+        "others": 6000000
+      }
+    },
+    "wages": {
+      "total_wages": 1200000000,
+      "average_wage_per_day": 260
+    },
+    "gender_participation": {
+      "total_workers": 280000,
+      "women_workers": 150000
+    },
+    "performance": {
+      "work_completion_rate": 0.88
+    }
+  },
+  {
+    "district": "Chennai",
+    "employment": {
+      "total_households": 50000,
+      "provided_employment": 40000,
+      "person_days_generated": {
+        "sc": 500000,
+        "st": 100000,
+        "others": 1000000
+      }
+    },
+    "wages": {
+      "total_wages": 200000000,
+      "average_wage_per_day": 280
+    },
+    "gender_participation": {
+      "total_workers": 60000,
+      "women_workers": 32000
+    },
+    "performance": {
+      "work_completion_rate": 0.95
+    }
+  }
+]
