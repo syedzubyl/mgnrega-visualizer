@@ -13,7 +13,8 @@ interface DashboardFiltersProps {
 }
 
 export default function DashboardFilters({ data, filters, onFiltersChange }: DashboardFiltersProps) {
-  const availableYears = [2005, 2010, 2015, 2020, 2024]
+  // Generate all years from 2005 to 2025
+  const availableYears = Array.from({ length: 21 }, (_, i) => 2005 + i)
   const availableDistricts = [...new Set(data.map((item) => item.district))].sort()
 
   const handleYearChange = (year: number, checked: boolean) => {
@@ -59,8 +60,8 @@ export default function DashboardFilters({ data, filters, onFiltersChange }: Das
 
         {/* Year Filter */}
         <div>
-          <Label className="text-sm font-medium mb-3 block">Years</Label>
-          <div className="grid grid-cols-2 gap-2 max-h-40 overflow-y-auto">
+          <Label className="text-sm font-medium mb-3 block">Years (2005-2025)</Label>
+          <div className="grid grid-cols-3 gap-2 max-h-60 overflow-y-auto p-1 border rounded-md">
             {availableYears.map((year) => (
               <div key={year} className="flex items-center space-x-2">
                 <Checkbox
@@ -68,7 +69,7 @@ export default function DashboardFilters({ data, filters, onFiltersChange }: Das
                   checked={filters.years.includes(year)}
                   onCheckedChange={(checked) => handleYearChange(year, checked as boolean)}
                 />
-                <Label htmlFor={`year-${year}`} className="text-sm">
+                <Label htmlFor={`year-${year}`} className="text-sm cursor-pointer">
                   {year}
                 </Label>
               </div>

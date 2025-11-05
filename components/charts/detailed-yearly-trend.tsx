@@ -28,6 +28,26 @@ interface DetailedYearlyTrendProps {
 export default function DetailedYearlyTrend({ data }: DetailedYearlyTrendProps) {
   const [wageChartType, setWageChartType] = useState<'line' | 'bar'>('line')
 
+  // Derived helpers for better UX in Wage Distribution Analysis
+  const formatCrores = (num?: number) => {
+    if (typeof num !== 'number') return '-'
+    return `${(num / 10000000).toFixed(1)} Cr`
+  }
+
+  const maxWageYear = data.reduce(
+    (acc: any, d: any) => (d.total_wages > acc.value ? { year: d.year, value: d.total_wages } : acc),
+    { year: null, value: -Infinity }
+  )
+  const first = data[0]
+  const last = data[data.length - 1]
+  const cagr = (() => {
+    if (!first || !last) return null
+    const n = last.year - first.year
+    if (n <= 0 || first.total_wages <= 0) return null
+    const rate = Math.pow(last.total_wages / first.total_wages, 1 / n) - 1
+    return Math.round(rate * 100)
+  })()
+
   return (
     <div className="space-y-6">
       <Card>
@@ -84,7 +104,13 @@ export default function DetailedYearlyTrend({ data }: DetailedYearlyTrendProps) 
             <IndianRupee className="h-5 w-5 mr-2 text-green-600" />
             Wage Distribution Analysis
           </CardTitle>
-          <div className="mt-2 flex gap-2">
+          <div className="mt-2 flex flex-wrap items-center gap-2">
+            <Badge variant="secondary" className="text-xs">Peak: {maxWageYear.year} · ₹{formatCrores(maxWageYear.value)}</Badge>
+            <Badge variant="secondary" className="text-xs">CAGR: {cagr !== null ? `${cagr}%` : '-'}</Badge>
+            {last?.avg_wage_rate ? (
+              <Badge variant="secondary" className="text-xs">Avg Wage (₹/day): {last.avg_wage_rate}</Badge>
+            ) : null}
+            <span className="ml-auto"></span>
             <button
               className={`px-3 py-1 rounded border text-sm font-medium transition-colors ${wageChartType === 'line' ? 'bg-green-600 text-white' : 'bg-white text-green-700 border-green-600'}`}
               onClick={() => setWageChartType('line')}
@@ -105,8 +131,16 @@ export default function DetailedYearlyTrend({ data }: DetailedYearlyTrendProps) 
               <LineChart data={data}>
                 <CartesianGrid strokeDasharray="3 3" />
                 <XAxis dataKey="year" />
-                <YAxis />
-                <Tooltip formatter={(value) => [`₹${(value as number).toLocaleString()}`, "Total Wages"]} />
+                <YAxis tickFormatter={(v) => `₹${(v / 10000000).toFixed(0)}Cr`} />
+                <Tooltip
+                  formatter={(value, name, props) => {
+                    if (props && props.dataKey === 'total_wages') {
+                      return [`₹${formatCrores(value as number)}`, 'Total Wages']
+                    }
+                    return [typeof value === 'number' ? value.toLocaleString() : String(value), name as string]
+                  }}
+                  labelFormatter={(label) => `Year: ${label}`}
+                />
                 <Legend />
                 <ReferenceLine x={2020} stroke="#EF4444" strokeDasharray="4 2" label={{ value: 'Pandemic', position: 'top', fill: '#EF4444', fontWeight: 'bold', fontSize: 12 }} />
                 <Line
@@ -116,19 +150,32 @@ export default function DetailedYearlyTrend({ data }: DetailedYearlyTrendProps) 
                   strokeWidth={3}
                   name="Total Wages Distributed"
                 >
-                  <LabelList dataKey="total_wages" position="top" formatter={v => `₹${(v as number).toLocaleString()}`} />
+                  <LabelList dataKey="total_wages" position="top" formatter={v => `₹${formatCrores(v as number)}`} />
                 </Line>
+                {data?.[0]?.avg_wage_rate ? (
+                  <Line
+                    type="monotone"
+                    dataKey="avg_wage_rate"
+                    stroke="#2563EB"
+                    strokeWidth={2}
+                    dot={false}
+                    name="Avg Wage Rate (₹/day)"
+                  />
+                ) : null}
               </LineChart>
             ) : (
               <RechartsBarChart data={data}>
                 <CartesianGrid strokeDasharray="3 3" />
                 <XAxis dataKey="year" />
-                <YAxis />
-                <Tooltip formatter={(value) => [`₹${(value as number).toLocaleString()}`, "Total Wages"]} />
+                <YAxis tickFormatter={(v) => `₹${(v / 10000000).toFixed(0)}Cr`} />
+                <Tooltip
+                  formatter={(value) => [`₹${formatCrores(value as number)}`, "Total Wages"]}
+                  labelFormatter={(label) => `Year: ${label}`}
+                />
                 <Legend />
                 <ReferenceLine x={2020} stroke="#EF4444" strokeDasharray="4 2" label={{ value: 'Pandemic', position: 'top', fill: '#EF4444', fontWeight: 'bold', fontSize: 12 }} />
                 <RechartsBar dataKey="total_wages" fill="#059669" name="Total Wages Distributed">
-                  <LabelList dataKey="total_wages" position="top" formatter={v => `₹${(v as number).toLocaleString()}`} />
+                  <LabelList dataKey="total_wages" position="top" formatter={v => `₹${formatCrores(v as number)}`} />
                 </RechartsBar>
               </RechartsBarChart>
             )}
@@ -136,11 +183,12 @@ export default function DetailedYearlyTrend({ data }: DetailedYearlyTrendProps) 
 
           <div className="mt-4 p-4 bg-green-50 rounded-lg">
             <h4 className="font-semibold text-green-800 mb-2">💰 Wage Analysis:</h4>
-            <p className="text-green-700 text-sm">
-              The total wage distribution has grown exponentially from ₹2-3 crores in 2005 to over ₹300 crores in recent
-              years. This reflects both increased participation and significant wage rate improvements, demonstrating
-              MGNREGA's substantial economic impact on Tamil Nadu's rural economy.
-            </p>
+            <ul className="text-green-700 text-sm list-disc pl-5 space-y-1">
+              <li>Total wages are shown in crores (₹Cr) for easier comparison across years.</li>
+              <li>Blue line shows average daily wage rate (₹/day); green shows total wages distributed.</li>
+              <li>Red marker highlights 2020 (Pandemic) for context.</li>
+              <li>Peak year: {maxWageYear.year}, Total wages: ₹{formatCrores(maxWageYear.value)}{last?.avg_wage_rate ? `, Latest avg wage: ₹${last.avg_wage_rate}/day` : ''}.</li>
+            </ul>
           </div>
         </CardContent>
       </Card>
